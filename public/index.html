@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Glided Fork | Modern Bistro</title>
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-poppins bg-stone-50 text-stone-800">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-bistro-dark tracking-tighter">
+                GILDED<span class="text-bistro-gold">FORK.</span>
+            </div>
+
+            <div class="hidden md:flex space-x-8 font-semibold uppercase text-sm">
+                <a href="index.html" class="text-bistro-gold">Home</a>
+                <a href="about.html" class="hover:text-bistro-gold transition">About</a>
+                <a href="menu.html" class="hover:text-bistro-gold transition">Menu</a>
+                <a href="contact.html" class="hover:text-bistro-gold transition">Contact</a>
+            </div>
+
+            <button class="md:hidden text-bistro-dark">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <header class="relative h-[80vh] flex items-center overflow-hidden">
+        <div class="absolute inset-0 bg-black/50 z-10"></div>
+        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1600" class="absolute inset-0 w-full h-full object-cover" alt="Bistro Interior">
+        <div class="container mx-auto px-6 relative z-20 text-white">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                Experience <br><span class="text-bistro-gold">Elevated Dining.</span>
+            </h1>
+            <p class="text-lg md:text-xl mb-8 max-w-lg font-light">
+                Infusing traditional flavors with modern culinary techniques.
+            </p>
+            <div class="flex space-x-4">
+                <a href="menu.html" class="bg-bistro-gold hover:bg-yellow-600 text-bistro-dark px-8 py-3 rounded-full font-bold transition">
+                    View Menu
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <footer class="bg-bistro-dark text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm opacity-60">© 2026 Josef Michael Damaso | ITE1 Final Project</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
