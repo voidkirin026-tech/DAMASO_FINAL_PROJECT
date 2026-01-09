@@ -1,0 +1,7 @@
+'''text
+# Dependencies
+node_modules/
+
+# Build outputs
+.DS_Store
+dist/
