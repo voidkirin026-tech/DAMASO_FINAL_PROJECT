@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="../src/output.css">
+
+<body class="bg-stone-50 font-poppins">
+    <div class="bg-bistro-dark py-12 text-white text-center">
+        <h1 class="text-4xl font-bold">Contact Us</h1>
+        <p class="text-bistro-gold mt-2">We'd love to hear from you.</p>
+    </div>
+
+    <section class="container mx-auto px-6 py-20 grid md:grid-cols-2 gap-12">
+        <div class="space-y-8">
+            <h2 class="text-3xl font-bold text-bistro-dark">Get In Touch</h2>
+            <p class="text-gray-600">Have a question about our menu to book a private event? Reach out to us below.</p>
+
+            <div class="flex items-start space-x-4">
+                <div class="bg-bistro-gold p-3 rounded-lg text-bistro-dark">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.65716.657L13.414 20.9a1.998 1.998 0 012.827 01-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                </div>
+                <div>
+                    <h4 class="font-bold">Locations</h4>
+                    <p class="text-gray-500">123 Culinary Ave, Foodie City</p>
+                </div>
+            </div>
+        </div>
+
+        <form class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-bistro-gold">
+            <div class="grid gap-6">
+                <div>
+                    <label class="block text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" class="w-full border-gray-200 rounded-lg p-3 focus:ring-2 focus:ring-bistro-gold outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-bold mb-2">Message</label>
+                    <textarea rows="4" class="w-full border-gray-200 rounded-lg p-3 focus:ring-2 focus:ring-bistro-gold outline-none"></textarea>
+                </div>
+                <button type="submit" class="bg-bistro-dark text-white font-bold py-3 rounded-lg hover:bg-bistro-gold hover:text-bistro-dark transition duration-300">
+                    Send Message
+                </button>
+            </div>
+        </form>
+    </section>
+</body>
