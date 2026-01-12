@@ -8,86 +8,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../src/output.css">
     <link rel="stylesheet" href="../src/animations.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="httpps://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
 </head>
 <body class="bg-stone-50 font-poppins">
+    <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50 animate-slide-down">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold text-bistro-dark tracking-tighter hover:scale-110 transition duration-300">
-                GILDED<span class="text-bistro-gold">FORK.</span>
+                GILDED <span class="text-bistro-gold">EDGE. </span>
             </div>
 
             <div class="hidden md:flex space-x-8 font-semibold uppercase text-sm">
-                <a href="index.html" class="text-bistro-gold">
+                <a href="index.html" class="hover:text-bistro-gold transition relative group">
                     Home
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-bistro-gold group-hover:w-full transition-all duration-300"></span>
                 </a>
-                <a href="about.html" class="hover:text-bistro-gold transition">
-                    About
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-bistro-gold group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="menu.html" class="hover:text-bistro-gold transition">
-                    Menu
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-bistro-gold group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="contact.html" class="hover:text-bistro-gold transition">
-                    Contact
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-bistro-gold group-hover:w-full transition-all duration-300"></span>
-                </a>
+                <a href="about.html"></a>
+                <a href="menu.html"></a>
+                <a href="contact.html"></a>
             </div>
-
-            <button class="md:hidden text-bistro-dark">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
         </div>
     </nav>
-
-    <div class="bg-bistro-dark py-12 text-white text-center">
-        <h1 class="text-4xl font-bold animate-fade-in-up">Contact Us</h1>
-        <p class="text-bistro-gold mt-2 animate-fade-in-up" style="animation-delay: 0.2s;">We'd love to hear from you.</p>
-    </div>
-
-    <section class="container mx-auto px-6 py-20 grid md:grid-cols-2 gap-12">
-        <div class="space-y-8 animate-fade-in-left">
-            <h2 class="text-3xl font-bold text-bistro-dark">Get In Touch</h2>
-            <p class="text-gray-600">Have a question about our menu to book a private event? Reach out to us below.</p>
-
-            <div class="flex items-start space-x-4 hover:translate-x-2 transition duration-300">
-                <div class="bg-bistro-gold p-3 rounded-lg text-bistro-dark shrink-0">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L7.071 6. 071a2 2 0 010-2.828l. 707-. 707a2 2 0 012.828 0L20.485 14.14a2 2 0 010 2.828l-.707.707a2 2 0 01-2.828 0z"></path></svg>
-                </div>
-                <div>
-                    <h4 class="font-bold text-bistro-dark">Locations</h4>
-                    <p class="text-gray-500">123 Culinary Ave, Foodie City</p>
-                </div>
-            </div>
-        </div>
-
-        <form class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-bistro-gold animate-fade-in-right hover:shadow-2xl transition duration-300">
-            <div class="grid gap-6">
-                    <div class="transform transition duration-300 hover:scale-105">
-                        <label for="fullname" class="block text-sm font-bold mb-2 text-bistro-dark">Full Name</label>
-                        <input id="fullname" type="text" placeholder="John Doe" class="w-full border border-gray-200 rounded-lg p-3 focus:ring-2 focus:ring-bistro-gold outline-none transition">
-                    </div>
-                    <div class="transform transition duration-300 hover:scale-105">
-                        <label for="email" class="block text-sm font-bold mb-2 text-bistro-dark">Email</label>
-                        <input id="email" type="email" placeholder="john@example.com" class="w-full border border-gray-200 rounded-lg p-3 focus:ring-2 focus:ring-bistro-gold focus:border-transparent outline-none transition">
-                    </div>
-                    <div class="transform transition duration-300 hover:scale-105">
-                        <label for="message" class="block text-sm font-bold mb-2 text-bistro-dark">Message</label>
-                        <textarea id="message" rows="4" placeholder="Your message here..." class="w-full border border-gray-200 rounded-lg p-3 focus:ring-2 focus:ring-bistro-gold focus:border-transparent outline-none transition resize"></textarea>
-                    </div>
-                <button type="submit" class="bg-bistro-dark text-white font-bold py-3 rounded-lg hover:bg-bistro-gold hover:text-bistro-dark transition duration-300 hover:scale-105 hover:shadow-lg">
-                    Send Message
-                </button>
-            </div>
-        </form>
-    </section>
-
-    <footer class="bg-bistro-dark text-white py-12">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-sm opacity-60">© 2026 Josef Michael Damaso | ITE1 Final Project</p>
-        </div>
-    </footer>
 </body>
 </html>
