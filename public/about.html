@@ -11,6 +11,111 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
 </head>
 <body class="bg-stone-50 font-poppins">
-    <!-- Navigation -->    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 animate-slide-down">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-bistro-dark tracking-tighter hover:scale-110 transition duration-300">
+                GLIDED <span class="text-bistro-gold">EDGE.</span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-semibold uppercase text-sm">
+                <a href="index.html" class="hover:text-bistro-gold transition relative group">
+                    Home
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-bistro-gold group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="about.html" class="hover:text-bistro-gold transition relative group">
+                    About
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-bistro-gold group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="menu.html" class="text-bistro-gold relative group">
+                    Menu
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-bistro-gold"></span>
+                </a>
+                <a href="contact.html" class="hover:text-bistro-gold transition relative group">
+                    Contact
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-bistro-gold group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </div>
+
+            <button class="md:hidden text-bistro-dark hover:scale-110 transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="bg-bistro-dark py-20 text-center text-white">
+        <h1 class="text-4xl md:text-6xl font-bold uppercase tracking-widest animate-fade-in-up">Our Story</h1>
+        <p class="text-bistro-gold mt-4 italic font-light animate-fade-in-up" style="animation-delay: 0.2s;">Heritage on every place.</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-20">
+        <!-- The Culinary Vision Section -->
+        <section class="mb-20 animate-fade-in-up">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="rounded-2xl overflow-hidden shadow-xl animate-fade-in-left hover:shadow-2xl hover-translate-y-2 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1550966841-3ee32289674c?auto=format&fit=crop&w=800" alt="Our Kitchen" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="space-y-6 animate-fade-in-right">
+                    <h2 class="text-4xl font-bold text-bistro-dark border-l-4 border-bistro-green pl-4">The Culinary Vision</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        Founded in 2026, The Gilded Edge Bistro started with a simple mission: to make gourmet dining accessible and sustainable. We source 90% of our ingredients from local farms within a 50-mile radius, ensuring peak freshness and supporting our.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="p-4 bg-white rounded-lg shadow-sm border-b-2 border-bistro-gold hover:shadow-lg hover:scale-105 transition duration-300 cursor-pointer">
+                            <span class="font-bold block text-bistro-dark">100% Organic</span>
+                            <span class="text-xs text-gray-500">Fresh from local farms</span>
+                        </div>
+                        <div class="p-4 bg-white rounded-lg shadow-sm border-b-2 border-bistro-gold hover:shadow-lg hover:scale-105 transition duration-300 cursor-pointer">
+                            <span class="font-bold block text-bistro-dark">Master Chefs</span>
+                            <span class="text-xs text-gray-500">Expertly crafted dishes</span>
+                        </div>
+                        <div class="p-4 bg-white rounded-lg shadow-sm border-b-2 border-bistro-gold hover:shadow-lg cursor-pointer">
+                            <span class="font-bold block text-bistro-dark">Sustainability</span>
+                            <span class="text-xs text-gray-500">Eco-conscious practices</span>
+                        </div>
+                        <div class="p-4 bg-white rounded-lg shadow-sm border-b-2 border-bistro-gold hover:shadow-lg cursor-pointer">
+                            <span class="font-bold block text-bistro-dark">Heritage</span>
+                            <span class="text-xs text-gray-500">Time-honored recipes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Philosophy Section -->
+        <section class="mb-20 animate-fade-in-up" style="animation-delay: 0.1s;">
+            <div class="bg-white rounded-2xl shadow-lg p-10 border-l-4 border-bistro-green">
+                <h3 class="text-3xl font-bold text-bistro-dark mb-6">Our Philosophy</h3>
+                <p class="text-gray-600 leading-relaxed text-lg mb-6">
+                    At Gilded Edge, we believe that exceptional food starts with exceptional ingredients. Our head chef, trained in Michelin-starred kitchens across Europe, brings a refined perspective to every dish while honoring traditional cooking methods that have stood the test of time.
+                </p>
+                <p class="text-gray-600 leading-relaxed text-lg">We're committed to creating memorable dining experiences where every element - from the ambience to the plating - tells a story. Our intimate setting allows us to focus on quality over quantity, ensuring that each guest receives personalized attention and care.</p>
+            </div>
+        </section>
+
+        <!-- Sourcing & Sustainanbility Section -->
+        <section class="mb-20 animate-fade-in-up" style="animation-delay: 0.2s">
+            <h3 class="text-3xl font-bold text-bistro-dark border-b-4 border-bistro-green inline-block mb-10 pb-2">Sourcing & Sustainability</h3>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Local Farms -->
+                <div class="group bg-white rounded-lg shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+                    <div class="w-12 h-12 bg-bistro-gold rounded-lg mb-4 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-bistro-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M713L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-lg text-bistro-dark mb-2 group-hover:text-bistro-gold transition">Local Farms</h4>
+                    <p class="text-gray-600">We partner with family-owned farms and producers within our region, supporting the local economy while ensuring peak ingredient freshness.</p>
+                </div>
+
+                <!-- Seasonal Menu -->
+                <div class="group bg-white rounded-lg shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+                    <div class="w-12 h-12 bg-bistro-gold rounded-lg mb-4 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-bistro-dark" fil><path></path></svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
