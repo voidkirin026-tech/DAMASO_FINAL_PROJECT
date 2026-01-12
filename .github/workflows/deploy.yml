@@ -22,11 +22,14 @@ jobs:
       - name: Install Tailwind
         run: npm install -D tailwindcss
 
+      - name: Ensure node_modules/.bin is in PATH
+        run: echo "$(pwd)/node_modules/.bin >> $GITHUB_PATH"
+
       - name: Build CSS
         run: npx tailwindcss -i ./src/input.css -o ./css/output.css --minify
 
       - name: Deploy to Github Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{secrets.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 }}
+          github_token: ${{secrets.GITHUB_TOKEN }}
           publish_dir: ./
