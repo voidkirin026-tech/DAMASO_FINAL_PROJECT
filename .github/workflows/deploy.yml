@@ -23,7 +23,7 @@ jobs:
         run: npm ci
 
       - name: Build CSS
-        run: npx -yes tailwindcss@latest -i ./src/input.css -o ./css/output.css --minify
+        run: npx tailwindcss -i ./src/input.css -o ./css/output.css --minify
 
       - name: Deploy to Github Pages
         uses: peaceiris/actions-gh-pages@v3
