@@ -13,5 +13,7 @@
     "@tailwindcss/cli": "^4.1.18",
     "tailwindcss": "^4.1.18"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "daisyui": "^5.5.14"
+  }
 }
