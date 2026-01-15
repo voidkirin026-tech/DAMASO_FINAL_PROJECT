@@ -6,7 +6,7 @@ A modern, elegant restaurant website showcasing fine dining experiences with a f
 
 Gilded Edge Bistro is a full-stack website for a contemporary bistro restaurant, featuring a sophisticated design that reflects the premium nature of the dining experience. Built with responsive HTML, Tailwind CSS, and custom animations.
 
-**Live Site:** [to be added later]
+**Live Site:** `https://voidkirin026-tech.github.io/DAMASO_FINAL_PROJECT/`
 **Project Type:** ITE 1 Final Project
 **Year:** 2026
 
