@@ -1138,7 +1138,7 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 @layer components {
   body {
     padding-left: 1.5rem;
-    padding-right: 1.5;
+    padding-right: 1.5rem;
   }
   @media (min-width: 768px) {
     body {
