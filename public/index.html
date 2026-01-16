@@ -5,134 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gilded Edge Bistro | Home</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: `#d4af37`,
+                        dark: `#1c1917`,
+                    },
+                    fontFamily: {
+                        poppins: [`Poppins`, `sans-serif`],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="font-poppins bg-emerald-50 text-stone-900">
-    <!-- Navigation -->
-    <nav class="bg-amber-50 shadow-md sticky top-0 z-50 animate-slide-down">
-        <div class="w-full px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-bistro-dark tracking-tighter hover:scale-110 transition duration-300">
-                GILDED <span class="text-bistro-gold">EDGE.</span>
-            </div>
-            <div class="hidden md:flex space-x-8 font-semibold uppercase text-sm">
-                <a href="index.html" class="text-bistro-gold relative group">
-                    Home
-                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-bistro-gold"></span>
-                </a>
-                <a href="about.html" class="hover:text-bistro-gold transition relative group">
-                    About
-                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-bistro-gold group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="menu.html" class="hover:text-bistro-gold transition relative group">
-                    Menu
-                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-bistro-gold group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="contact.html" class="hover:text-bistro-gold transition relative group">
-                    Contact
-                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-bistro-gold group-hover:w-full transition-all duration-300"></span>
-                </a>
-            </div>
+    <!-- NAVIGATION -->
+<header class="sticky top-0 z-50 bg-amber-50 shadow">
+<div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <h1 class="text-2xl font-bold tracking-tight">GILDED <span class="text-gold">EDGE</span></h1>
 
-            <button type="button" class="md:hidden text-bistro-dark hover:scale-110 transition">
-                Navigation Bar
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex gap-8 text-sm font-semibold uppercase">
+    <a href="index.html" class="text-gold">Home</a>
+    <a href="about.html" class="hover:text-gold">About</a>
+    <a href="menu.html" class="hover:text-gold">Menu</a>
+    <a href="contact.html" class="hover:text-gold">Contact</a>
     </nav>
 
-    <!-- Hero Header -->
-    <header class="relative h-[80vh] flex items-center overflow-hidden">
-        <div class="absolute inset-0 bg-black/50 z-10"></div>
-        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1600" class="absolute inset-0 w-full h-full object-cover" alt="Bistro Interior">
-        <div class="w-full px-6 md:px-8 lg:px-12 relative z-20 text-white">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up">
-                Experience <br><span class="text-bistro-gold">Elevated Dining.</span>
-            </h1>
-            <p class="text-lg md:text-xl mb-8 max-w-lg font-light animate-fade-in-up">
-                Infusing traditional flavors with modern culinary techniques. Every dish is a masterpiece crafted with passion.
-            </p>
-            <div class="flex flex-col lg:flex-row space-y-4 sm:space-y-0 sm:space-x-8 animate-fade-in-up">
-                <a href="menu.html" class="bg-bistro-gold hover:bg-yellow-600 text-bistro-dark px-8 py-3 rounded-full font-bold transition duration-300 hover:scale-105 hover:shadow-lg">
-                    View Menu
-                </a>
-                <br>
-                <a href="contact.html" class="border-2 border-white hover:bg-emerald-600 hover:text-bistro-dark text-white px-8 py-3 rounded-full font-bold transition duration-300 hover:scale-105">
-                    Reserve a Table
-                </a>
-            </div>
-        </div>
-    </header>
+    <!-- Mobile Menu Button -->
+    <button type="button" id="menuBtn" class="md:hidden">
+        mobileMenu
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+    </button>
+</div>
 
-    <!-- About Preview Section -->
-    <section class="bg-amber-50 py-20">
-        <div class="w-full px-6 md:px-8 lg:px-12">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="animate-fade-in-left">
-                    <h2 class="text-4xl font-bold text-bistro-dark border-l-4 border-bistro-green pl-4 mb-6">Welcome to Gilded Edge</h2>
-                    <p class="text-gray-600 leading-relaxed mb-8 text-lg">Founded in 2026, Gilded Edge Bistro is dedicated to crafting unforgettable dining experiences. We combine time-honored culinary traditions with innovative techniques, all while sourcing 90% of you ingredients from local farms.</p>
-                    <p class="text-gray-600 leading-relaxed mb-8 text-lg">Every plate tells a story of heritage, passion, and commitment to excellence. Our intimate setting and personalized service ensure that your visit is nothing short of exceptional.</p>
-                    <a href="about.html" class="inline-block bg-bistro-dark hover:bg-bistro-gold hover:text-bistro-dark text-white px-8 py-3 rounded-lg font-bold transition duration-300 hover:shadow-lg">
-                        Learn Our Story
-                    </a>
-                </div>
-                <div class="rounded-2xl overflow-hidden shadow-xl animate-fade-in-right hover:shadow-2xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1550966841-3ee32289674c?auto=format&fit=crop&w=600" alt="Gilded Edge Bistro Kitchen" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Mobile Nav -->
+<div id="mobileMenu" class="hidden md:hidden bg-amber-50 border-t">
+    <nav class="flex flex-col px-4 py-4 gap-4 font-semibold uppercase text-sm">
+    <a href="index.html" class="text-gold">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="contact.html">Contact</a>
+    </nav>
+</div>
+</header>
 
-    <!-- Highlights Section -->
-    <section class="bg-stone-50 py-20">
-        <div class="w-full px-6 md:px-8 lg:px-12">
-            <h2 class="text-4xl font-bold text-bistro-dark text-center border-b-4 border-bistro-green inline-block mb-16 pb-2 w-full">Why Choose Gilded Edge</h2>
+<!-- HERO -->
+<section class="relative h-[70vh] flex items-center justify-center">
+<img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1600" class="absolute inset-0 w-full h-full object-cover" alt="Hero">
+<div class="absolute inset-0 bg-black/60"></div>
 
-            <div class="grid md:grid-cols-3 gap-10">
-                <!-- Premium Ingredients -->
-                <div class="group bg-amber-50 rounded-lg shadow-lg p-10 hover:shadow-2xl hover:-translate-y-2 transition duration-300 animate-fade-in-up">
-                    <div class="w-14 h-14 bg-bistro-gold rounded-lg mb-6 flex items-center justify-center group-hover:scale-110 transition duration-300">
-                        <svg class="w-8 h-8 text-bistro-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-bistro-dark mb-3 group-hover:text-bistro-gold transition">Premium Ingredients</h3>
-                    <p class="text-gray-600">Sourced from local farms and trusted suppliers. We guarantee the freshest, highest-quality ingredients in every dish.</p>
-                </div>
+<div class="relative z-10 text-center px-6 max-w-2xl">
+    <h2 class="text-4xl md:text-6xl font-bold text-white mb-6">Experience <span class="text-gold">Elevated Dining</span></h2>
+    <p class="text-white/90 mb-8">Traditional flavors, modern techniques, unforgettable moments.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <a href="menu.html" class="bg-gold text-dark px-8 py-3 rounded-full font-bold hover:scale-105 transition">View Menu</a>
+    <a href="contact.html" class="border border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-dark transition">Reserve Table</a>
+    </div>
+</div>
+</section>
 
-                <!-- Expert Chefs -->
-                <div class="group bg-amber-50 rounded-lg shadow-lg p-10 hover:shadow-2xl hover:-translate-y-2 transition duration-300 animate-fade-in-up">
-                    <div class="w-14 h-14 bg-bistro-gold rounded-lg mb-6 flex items-center justify-center group-hover:scale-110 transition duration-300">
-                        <svg class="w-8 h-8 text-bistro-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-bistro-dark mb-3 group-hover:text-bistro-gold transition">Expert Chefs</h3>
-                    <p class="text-gray-600">Led by chefs trained in Michelin-starred kitchens worldwide. Innovation meets tradition in every creation.</p>
-                </div>
+<!-- ABOUT PREVIEW -->
+<section class="py-20 bg-amber-50">
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+    <h3 class="text-3xl font-bold mb-4 border-l-4 border-gold pl-4">Welcome to Gilded Edge</h3>
+    <p class="mb-4 text-gray-700">Founded in 2026, Gilded Edge Bistro blends culinary heritage with modern innovation using locally sourced ingredients.</p>
+    <p class="mb-6 text-gray-700">Every dish reflects our passion, precision, and commitment to excellence.</p>
+    <a href="about.html" class="inline-block bg-dark text-white px-6 py-3 rounded-lg font-semibold hover:bg-gold hover:text-dark transition">Learn Our Story</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1550966841-3ee32289674c?auto=format&fit=crop&w=600" class="rounded-xl shadow-lg" alt="Learn Our Story">
+</div>
+</section>
 
-                <!-- Exceptional Service -->
-                <div class="group bg-amber-50 rounded-lg shadow-lg p-10 hover:shadow-2xl hover:-translate-y-2 transition duration-300 animate-fade-in-up">
-                    <div class="w-14 h-14 bg-bistro-gold rounded-lg mb-6 flex items-center justify-center group-hover:scale-110 transition duration-300">
-                        <svg class="w-8 h-8 text-bistro-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h-2m0 0H10m2 0h2m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-bistro-dark mb-3 group-hover:text-bistro-gold transition">Exceptional Service</h3>
-                    <p class="text-gray-600">Personalized attention and warm hospitality. We treat every guest like a cherished member of our family.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- HIGHLIGHTS -->
+<section class="py-20 bg-stone-50">
+<div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-12">Why Choose Gilded Edge</h3>
+    <div class="grid gap-8 md:grid-cols-3">
+    <div class="bg-amber-50 p-8 rounded-lg shadow hover:-translate-y-1 transition">
+        <h4 class="font-bold mb-2">Premium Ingredients</h4>
+        <p class="text-gray-600">Fresh, locally sourced ingredients in every dish.</p>
+    </div>
+    <div class="bg-amber-50 p-8 rounded-lg shadow hover:-translate-y-1 transition">
+        <h4 class="font-bold mb-2">Expert Chefs</h4>
+        <p class="text-gray-600">Trained in world‑class kitchens.</p>
+    </div>
+    <div class="bg-amber-50 p-8 rounded-lg shadow hover:-translate-y-1 transition">
+        <h4 class="font-bold mb-2">Exceptional Service</h4>
+        <p class="text-gray-600">Warm hospitality and personalized dining.</p>
+    </div>
+    </div>
+</div>
+</section>
 
-    <!-- CTA Section -->
-    <section class="bg-bistro-dark text-black py-20">
-        <div class="w-full px-6 md:px-8 lg:px-12 text-center">
-            <h2 class="text-4xl font-bold mb-6 animate-fade-in-up">Ready for an Unforgettable Experience?</h2>
-            <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90 animate-fade-in-up">Reserve your table and discover why Gilded Edge Bistro is the destination for elevated dining.</p>
-            <a href="contact.html" class="inline-block bg-bistro-gold hover:bg-yellow-600 text-bistro-dark px-10 py-4 rounded-full font-bold text-lg transition duration-300 hover:scale-105 hover:shadow-lg animate-fade-in-up">
-                Make a Reservation
-            </a>
-        </div>
-    </section>
+<!-- CTA -->
+<section class="py-20 bg-dark text-center text-white">
+<h3 class="text-3xl font-bold mb-4">Ready for an Unforgettable Experience?</h3>
+<p class="mb-8">Reserve your table today.</p>
+<a href="contact.html" class="bg-gold text-dark px-10 py-4 rounded-full font-bold hover:scale-105 transition">Make a Reservation</a>
+</section>
 
-    <!-- Footer -->
-    <footer class="bg-bistro-dark text-black py-12">
-        <div class="w-full px-6 md:px-8 lg:px-12 text-center">
-            <p class="text-sm opacity-60">© Josef Michael Damaso | ITE1 Final Project</p>
-        </div>
-    </footer>
+<!-- FOOTER -->
+<footer class="bg-dark text-white py-6 text-center text-sm opacity-70">
+© Josef Michael Damaso | ITE1 Final Project
+</footer>
 </body>
 </html>
