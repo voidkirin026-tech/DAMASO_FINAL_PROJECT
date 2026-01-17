@@ -4,166 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gilded Edge Bistro | About</title>
+
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: "#1c1917"
+                    },
+                    fontFamily: {
+                        poppins: ["Poppins", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="../src/output.css">
-    <link rel="stylesheet" href="../src/animations.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-stone-50 font-poppins">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50 animate-slide-down">
-        <div class="w-full px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-bistro-dark tracking-tighter hover:scale-110 transition duration-300">
-                GLIDED <span class="text-bistro-gold">EDGE.</span>
-            </div>
-            <div class="hidden md:flex space-x-8 font-semibold uppercase text-sm">
-                <a href="index.html" class="hover:text-bistro-gold transition relative group">
-                    Home
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-bistro-gold group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="about.html" class="hover:text-bistro-gold transition relative group">
-                    About
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-bistro-gold group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="menu.html" class="text-bistro-gold relative group">
-                    Menu
-                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-bistro-gold"></span>
-                </a>
-                <a href="contact.html" class="hover:text-bistro-gold transition relative group">
-                    Contact
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-bistro-gold group-hover:w-full transition-all duration-300"></span>
-                </a>
-            </div>
+<body class="bg-stone-50 font-poppins text-stone-900">
 
-            <button type="button" class="md:hidden text-bistro-dark hover:scale-110 transition">
-                Navigation Bar
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-amber-50 shadow">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+            <h1 class="text-2xl font-bold tracking-tight">GILDED <span class="text-amber-500">EDGE</span></h1>
+
+            <nav aria-label="about desktop" class="hidden md:flex gap-8 text-sm font-semibold uppercase">
+                <a href="index.html" class="hover:text-amber-500">Home</a>
+                <a href="about.html" class="text-amber-500">About</a>
+                <a href="menu.html" class="hover:text-amber-500">Menu</a>
+                <a href="contact.html" class="hover:text-amber-500">Contact</a>
+            </nav>
+
+            <button type="button" id="menuBtn" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
             </button>
         </div>
-    </nav>
 
-    <!-- Header Section -->
-    <section class="bg-bistro-dark py-20 text-center text-white">
-        <h1 class="text-4xl md:text-6xl font-bold uppercase tracking-widest animate-fade-in-up">Our Story</h1>
-        <p class="text-bistro-gold mt-4 italic font-light animate-fade-in-up">Heritage on every place.</p>
+        <div id="mobileMenu" class="hidden md:hidden bg-amber-50 border-t">
+            <nav aria-label="about mobile" class="flex flex-col px-4 py-4 gap-4 font-semibold uppercase text-sm">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="text-amber-500">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="bg-dark text-white py-20 text-center">
+        <h2 class="text-4xl md:text-6xl font-bold tracking-widest uppercase mb-4">Our Story</h2>
+        <p class="text-amber-500 italic">Heritage on every plate.</p>
     </section>
 
-    <!-- Main Content -->
-    <main class="w-full px-6 md:px-8 lg:px-12 py-20">
-        <!-- The Culinary Vision Section -->
-        <section class="mb-20 animate-fade-in-up">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="rounded-2xl overflow-hidden shadow-xl animate-fade-in-left hover:shadow-2xl hover-translate-y-2 transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1550966841-3ee32289674c?auto=format&fit=crop&w=800" alt="Our Kitchen" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="space-y-6 animate-fade-in-right">
-                    <h2 class="text-4xl font-bold text-bistro-dark border-l-4 border-bistro-green pl-4">The Culinary Vision</h2>
-                    <p class="text-gray-600 leading-relaxed text-lg">
-                        Founded in 2026, The Gilded Edge Bistro started with a simple mission: to make gourmet dining accessible and sustainable. We source 90% of our ingredients from local farms within a 50-mile radius, ensuring peak freshness and supporting our.
-                    </p>
-                    <div class="grid grid-cols-2 gap-4 pt-4">
-                        <div class="p-4 bg-white rounded-lg shadow-sm border-b-2 border-bistro-gold hover:shadow-lg hover:scale-105 transition duration-300 cursor-pointer">
-                            <span class="font-bold block text-bistro-dark">100% Organic</span>
-                            <span class="text-xs text-gray-500">Fresh from local farms</span>
-                        </div>
-                        <div class="p-4 bg-white rounded-lg shadow-sm border-b-2 border-bistro-gold hover:shadow-lg hover:scale-105 transition duration-300 cursor-pointer">
-                            <span class="font-bold block text-bistro-dark">Master Chefs</span>
-                            <span class="text-xs text-gray-500">Expertly crafted dishes</span>
-                        </div>
-                        <div class="p-4 bg-white rounded-lg shadow-sm border-b-2 border-bistro-gold hover:shadow-lg cursor-pointer">
-                            <span class="font-bold block text-bistro-dark">Sustainability</span>
-                            <span class="text-xs text-gray-500">Eco-conscious practices</span>
-                        </div>
-                        <div class="p-4 bg-white rounded-lg shadow-sm border-b-2 border-bistro-gold hover:shadow-lg cursor-pointer">
-                            <span class="font-bold block text-bistro-dark">Heritage</span>
-                            <span class="text-xs text-gray-500">Time-honored recipes</span>
-                        </div>
+    <!-- MAIN CONTENT -->
+    <main class="max-w-7xl mx-auto px-6 py-20 space-y-24">
+
+        <!-- CULINARY VISION -->
+        <section class="grid md:grid-cols-2 gap-12 items-center">
+            <img width="7728" height="5152" sizes="(max-width: 767px) 100vw, (max-width: 918px) min(100%, 870px), (max-height: 755px) min(100%, 870px), (min-aspect-ratio: 7728/5152) calc(calc(100vh - 175px) * 1.5), calc(100vw - 48px)" alt="A commercial kitchen with stainless steel appliances and counters" class="responsiveImg-czQTaZ" src="https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  srcset="https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=870&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 870w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=1170&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1170w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=1470&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1470w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=1740&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1740w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=1770&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1770w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2070w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=2340&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2340w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=2370&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2370w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2670w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=2940&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2940w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=2970&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2970w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=3270&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3270w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=3540&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3540w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=3570&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3570w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=3870&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3870w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=4140&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4140w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=4170&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4170w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=4470&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4470w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=4740&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4740w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=4770&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4770w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=5070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5070w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=5340&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5340w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=5370&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5370w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=5670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5670w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=5940&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5940w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=5970&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5970w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=6270&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 6270w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=6540&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 6540w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=6570&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 6570w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=6870&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 6870w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=7140&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 7140w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=7170&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 7170w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=7470&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 7470w, https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?q=80&amp;w=7728&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 7728w">
+            <div class="space-y-6">
+                <h3 class="text-3xl font-bold border-l-4 border-amber-500 pl-4">The Culinary Vision</h3>
+                <p class="text-gray-700">Founded in 2026, Gilded Edge Bistro began with a simple mission: to make gourmet dining accessible and sustainable by sourcing 90% of ingredients from local farms.</p>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-4 bg-white rounded-lg shadow border-b-2 border-amber-500">
+                        <p class="font-bold">100% Organic</p>
+                        <p class="text-xs text-gray-500">Fresh from local farms</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow border-b-2 border-amber-500">
+                        <p class="font-bold">Master Chefs</p>
+                        <p class="text-xs text-gray-500">Expertly crafted dishes</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow border-b-2 border-amber-500">
+                        <p class="font-bold">Sustainability</p>
+                        <p class="text-xs text-gray-500">Eco-conscious practices</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow border-b-2 border-amber-500">
+                        <p class="font-bold">Heritage</p>
+                        <p class="text-xs text-gray-500">Time-honored recipes</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Our Philosophy Section -->
-        <section class="mb-20 animate-fade-in-up">
-            <div class="bg-white rounded-2xl shadow-lg p-10 border-l-4 border-bistro-green">
-                <h3 class="text-3xl font-bold text-bistro-dark mb-6">Our Philosophy</h3>
-                <p class="text-gray-600 leading-relaxed text-lg mb-6">
-                    At Gilded Edge, we believe that exceptional food starts with exceptional ingredients. Our head chef, trained in Michelin-starred kitchens across Europe, brings a refined perspective to every dish while honoring traditional cooking methods that have stood the test of time.
-                </p>
-                <p class="text-gray-600 leading-relaxed text-lg">We're committed to creating memorable dining experiences where every element - from the ambience to the plating - tells a story. Our intimate setting allows us to focus on quality over quantity, ensuring that each guest receives personalized attention and care.</p>
-            </div>
+        <!-- PHILOSOPHY -->
+        <section class="bg-white rounded-xl shadow-lg p-10 border-l-4 border-amber-500">
+            <h3 class="text-3xl font-bold mb-6">Our Philosophy</h3>
+            <p class="text-gray-700 mb-4">At Gilded Edge, exceptional food starts with exceptional ingredients. Our chefs combine Michelin-level training with time-honored techniques.</p>
+            <p class="text-gray-700">Every dining experience is crafted to tell a story—from ambiance to plating—ensuring personalized service and unforgettable moments.</p>
         </section>
 
-        <!-- Sourcing & Sustainanbility Section -->
-        <section class="mb-20 animate-fade-in-up">
-            <h3 class="text-3xl font-bold text-bistro-dark border-b-4 border-bistro-green inline-block mb-10 pb-2">Sourcing &amp; Sustainability</h3>
-
+        <!-- SUSTAINABILITY -->
+        <section>
+            <h3 class="text-3xl font-bold border-b-4 border-amber-500 inline-block mb-10 pb-2">Sourcing &amp; Sustainability</h3>
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Local Farms -->
-                <div class="group bg-white rounded-lg shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                    <div class="w-12 h-12 bg-bistro-gold rounded-lg mb-4 flex items-center justify-center">
-                        <svg class="w-6 h-6 text-bistro-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l. 4 2M7 13h10l4-8H5.4M713L5. 4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                    </div>
-                    <h4 class="font-bold text-lg text-bistro-dark mb-2 group-hover:text-bistro-gold transition">Local Farms</h4>
-                    <p class="text-gray-600">We partner with family-owned farms and producers within our region, supporting the local economy while ensuring peak ingredient freshness.</p>
+                <div class="bg-white p-8 rounded-lg shadow">
+                    <h4 class="font-bold mb-2">Local Farms</h4>
+                    <p class="text-gray-600">Partnering with family-owned farms to ensure freshness and support local communities.</p>
                 </div>
-
-                <!-- Seasonal Menu -->
-                <div class="group bg-white rounded-lg shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                    <div class="w-12 h-12 bg-bistro-gold rounded-lg mb-4 flex items-center justify-center">
-                        <svg class="w-6 h-6 text-bistro-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h4 class="font-bold text-lg text-bistro-dark mb-2 group-hover:text-bistro-gold transition">Seasonal Menu</h4>
-                    <p class="text-gray-600">Our menu changes with the seasons to celebrate what's in harvest, ensuring optimal flavor and nutritional value in every dish.</p>
+                <div class="bg-white p-8 rounded-lg shadow">
+                    <h4 class="font-bold mb-2">Seasonal Menu</h4>
+                    <p class="text-gray-600">Menus evolve with the seasons to highlight peak flavors and nutrition.</p>
                 </div>
-
-                <!-- Zero Waste -->
-                <div class="group bg-white rounded-lg shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                    <div class="w-12 h-12 bg-bistro-gold rounded-lg mb-4 flex items-center justify-center">
-                        <svg class="w-6 h-6 text-bistro-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7. 835 4. 697a3. 42 3.42 0 001.946-. 806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00. 806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-. 806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-. 806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
-                    </div>
-                    <h4 class="font-bold text-lg text-bistro-dark mb-2 group-hover:text-bistro-gold transition">Waste Reduction</h4>
-                    <p class="text-gray-600">We minimize food waste through careful planning and creative use of all ingredients. Everything has a purpose in a kitchen.</p>
+                <div class="bg-white p-8 rounded-lg shadow">
+                    <h4 class="font-bold mb-2">Waste Reduction</h4>
+                    <p class="text-gray-600">Careful planning ensures minimal waste and maximum creativity.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Team Section -->
-        <section class="animate-fade-in-up">
-            <h3 class="text-3xl font-bold text-bistro-dark border-b-4 border-bistro-green inline-block mb-10 pb-2">Meet Our Team</h3>
-
+        <!-- TEAM -->
+        <section>
+            <h3 class="text-3xl font-bold border-b-4 border-amber-500 inline-block mb-10 pb-2">Meet Our Team</h3>
             <div class="grid md:grid-cols-2 gap-12">
-                <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
-                    <div class="h-64 bg-linear-to-br from-bistro-gold to-bistro-green flex items-center justify-center">
-                        <svg class="w-32 h-32 text-white opacity-50" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path></svg>
+                <div class="bg-white rounded-xl shadow overflow-hidden">
+                    <div class="h-56 bg-gradient-to-br from-amber-500 to-emerald-600 flex items-center justify-center">
+                        <svg class="w-24 h-24 text-white opacity-60" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
                     </div>
                     <div class="p-8">
-                        <h4 class="text-2xl font-bold text-bistro-dark mb-2">Executive Chief</h4>
-                        <p class="text-bistro-gold font-semibold mb-3">Trained in Michelin-starred kitchens</p>
-                        <p class="text-gray-600">With over 15 years of culinary expertise, our Executive Chef brings refined European techniques combined with innovative local ingredients to every creation.</p>
+                        <h4 class="text-xl font-bold">Executive Chef</h4>
+                        <p class="text-amber-500 font-semibold mb-2">Michelin-trained</p>
+                        <p class="text-gray-600">15+ years of culinary expertise blending European techniques with local flavors.</p>
                     </div>
                 </div>
 
-                <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
-                    <div class="h-64 bg-linear-to-br from-bistro-green to-bistro-gold flex items-center justify-center">
-                        <svg class="w-32 h-32 text-white opacity-50" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path></svg>
+                <div class="bg-white rounded-xl shadow overflow-hidden">
+                    <div class="h-56 bg-gradient-to-br from-emerald-600 to-amber-500 flex items-center justify-center">
+                        <svg class="w-24 h-24 text-white opacity-60" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
                     </div>
                     <div class="p-8">
-                        <h4 class="text-2xl font-bold text-bistro-dark mb-2">Hospitality Team</h4>
-                        <p class="text-bistro-gold font-semibold mb-3">Dedicated to your dining experience</p>
-                        <p class="text-gray-600">Our attentive staff is trained to anticipate your needs and create a warm, welcoming atomosphere. We treat every guest like family.</p>
+                        <h4 class="text-xl font-bold">Hospitality Team</h4>
+                        <p class="text-amber-500 font-semibold mb-2">Guest-focused service</p>
+                        <p class="text-gray-600">A warm, attentive team dedicated to making every visit memorable.</p>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-bistro-dark text-black py-12 mt-20">
-        <div class="w-full px-6 md:px-8 lg:px-12 text-center">
-            <p class="text-sm opacity-60">© 2026 Josef Michael Damaso | ITE1 Final Project</p>
-        </div>
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-6 text-center text-sm opacity-70">
+        © 2026 Josef Michael Damaso | ITE1 Final Project
     </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    </script>
+
 </body>
 </html>

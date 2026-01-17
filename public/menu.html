@@ -1,475 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gilded Edge Bistro | Menu</title>
-    <link rel="stylesheet" href="../src/output.css">
-    <link rel="stylesheet" href="../src/animations.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gilded Edge Bistro | Menu</title>
+
+  <!-- Tailwind CSS v4 CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: '#1c1917'
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-stone-50 font-poppins">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50 animate-slide-down">
-        <div class="w-full px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-bistro-dark tracking-tighter hover:scale-110 transition duration-300">
-                GILDED <span class="text-bistro-gold">EDGE. </span>
-            </div>
-            <div class="hidden md:flex space-x-8 font-semibold uppercase text-sm">
-                <a href="index.html" class="hover:text-bistro-gold transition relative group">
-                    Home
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-bistro-gold group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="about.html" class="hover:text-bistro-gold transition relative group">
-                    About
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-bistro-gold group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="menu.html" class="text-bistro-gold relative group">
-                    Menu
-                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-bistro-gold"></span>
-                </a>
-                <a href="contact.html" class="hover:text-bistro-gold transition relative group">
-                    Contact
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-bistro-gold group-hover:w-full transition-all duration-300"></span>
-                </a>
-            </div>
-            <button type="button" class="md:hidden text-bistro-dark hover:scale-110 transition">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
+<body class="bg-stone-50 font-poppins text-stone-900">
+
+<!-- NAVIGATION -->
+<header class="bg-amber-50 shadow sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold tracking-tight"> GILDED <span class="text-amber-500">EDGE.</span></h1>
+
+    <nav class="hidden md:flex gap-8 text-sm font-semibold uppercase">
+      <a href="index.html" class="hover:text-amber-500">Home</a>
+      <a href="about.html" class="hover:text-amber-500">About</a>
+      <a href="menu.html" class="text-amber-500">Menu</a>
+      <a href="contact.html" class="hover:text-amber-500">Contact</a>
     </nav>
 
-    <!-- Header Section -->
-    <section class="bg-bistro-dark py-16 text-center text-white">
-        <h1 class="text-4xl md:text-6xl font-bold uppercase tracking-widest animate-fade-in-up">Our Menu</h1>
-        <p class="text-bistro-gold mt-4 italic animate-fade-in-up">Crafted with passion, served with elegance.</p>
-    </section>
+    <button type="button" id="menuBtn" class="md:hidden">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
+  </div>
 
-    <!-- Main Menu Content -->
-    <main class="w-full px-6 md:px-8 lg:px-12 py-20">
+  <div id="mobileMenu" class="hidden md:hidden bg-amber-50 border-t">
+    <nav class="flex flex-col px-4 py-4 gap-4 font-semibold uppercase text-sm">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html" class="text-amber-500">Menu</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-            <!-- STARTERS & SMALL PLATES -->
-            <section class="mb-24 animate-fade-in-up">
-                <h2 class="text-4xl font-bold text-bistro-dark border-b-4 border-bistro-green inline-block mb-12 pb-2">Starters &amp; Small Plates</h2>
+<!-- HEADER -->
+<header class="bg-dark text-white text-center py-20">
+  <h1 class="text-4xl md:text-6xl font-bold uppercase tracking-widest">Our Menu</h1>
+  <p class="mt-4 text-amber-500 italic">Crafted with passion, served with elegance.</p>
+</header>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-                    <!-- Whipped Ricotta -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Whipped Ricotta with Honey &amp; Thyme</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$8</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Silky whipped ricotta drizzled with golden honey, fresh thyme, and lemon zest. A luxurious start to your meal.</p>
-                        </div>
-                    </div>
+<!-- MENU CONTENT -->
+<main class="max-w-7xl mx-auto px-6 py-20 space-y-28">
 
-                    <!-- Charred Octopus -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Charred Octopus with Lemon Vinaigrette</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$14</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Tender octopus with a delicate char, finished with bright citrus and aromatic herbs. </p>
-                        </div>
-                    </div>
+  <!-- STARTERS -->
+  <section>
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold border-b-4 border-amber-500 inline-block pb-2">Starters &amp; Small Plates</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Whipped Ricotta with Honey &amp; Thyme</h3>
+        <span class="text-amber-500 font-bold">$8 / ₱475</span>
+        <p class="text-gray-600 mt-2">Silky whipped ricotta drizzled with honey, thyme, and lemon zest.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Charred Octopus with Lemon Vinaigrette</h3>
+        <span class="text-amber-500 font-bold">$14 / ₱832</span>
+        <p class="text-gray-600 mt-2">Tender octopus with citrus and aromatic herbs.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Crispy Polenta with Parmesan &amp; Truffle Oil</h3>
+        <span class="text-amber-500 font-bold">$9 / ₱535</span>
+        <p class="text-gray-600 mt-2">Golden polenta topped with aged parmesan and truffle oil.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Beef Carpaccio with Capers &amp; Arugula</h3>
+        <span class="text-amber-500 font-bold">$16 / ₱951</span>
+        <p class="text-gray-600 mt-2">Paper-thin beef with arugula, capers, and balsamic.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Roasted Bone Marrow with Gremolata</h3>
+        <span class="text-amber-500 font-bold">$12 / ₱713</span>
+        <p class="text-gray-600 mt-2">Rich marrow with lemon-herb gremolata and toast.</p>
+      </div>
+    </div>
+  </section>
 
-                    <!-- Crispy Polenta -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Crispy Polenta with Parmesan &amp; Truffle Oil</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$9</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Golden, crispy polenta cake topped with aged parmesan and premium black truffle oil.</p>
-                        </div>
-                    </div>
+  <!-- MAIN COURSES -->
+  <section>
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold border-b-4 border-amber-500 inline-block pb-2">Main Courses</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Herb-Crusted Salmon</h3>
+        <span class="text-amber-500 font-bold">$26 / ₱1,545</span>
+        <p class="text-gray-600 mt-2">Atlantic salmon with herb crust and lemon butter.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Grilled Ribeye Steak</h3>
+        <span class="text-amber-500 font-bold">$34 / ₱2,021</span>
+        <p class="text-gray-600 mt-2">Prime ribeye with truffle butter and roasted vegetables.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Wild Mushroom Risotto</h3>
+        <span class="text-amber-500 font-bold">$19 / ₱1,129</span>
+        <p class="text-gray-600 mt-2">Creamy arborio rice with porcini mushrooms.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Seared Duck Breast</h3>
+        <span class="text-amber-500 font-bold">$29 / ₱1,723</span>
+        <p class="text-gray-600 mt-2">Crispy duck breast with cherry reduction.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Braised Short Ribs</h3>
+        <span class="text-amber-500 font-bold">$31 / ₱1,842</span>
+        <p class="text-gray-600 mt-2">Slow-braised beef short ribs with red wine jus.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Pan-Roasted Chicken Supreme</h3>
+        <span class="text-amber-500 font-bold">$24 / ₱1,426</span>
+        <p class="text-gray-600 mt-2">Herb butter chicken with garlic jus.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Lamb Chops with Rosemary &amp; Dijon</h3>
+        <span class="text-amber-500 font-bold">$33 / ₱1,961</span>
+        <p class="text-gray-600 mt-2">Seared lamb chops with rosemary crust.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Miso-Glazed Black Cod</h3>
+        <span class="text-amber-500 font-bold">$32 / ₱1,902</span>
+        <p class="text-gray-600 mt-2">Delicate cod with miso glaze and rice.</p>
+      </div>
+    </div>
+  </section>
 
-                    <!-- Beef Carpaccio -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Beef Carpaccio with Capers &amp; Arugula</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$16</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Prime beef sliced paper-thin, dressed with peppery arugula, briny capers, and aged balsamic. </p>
-                        </div>
-                    </div>
+  <!-- PASTA & GRAINS -->
+  <section>
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold border-b-4 border-amber-500 inline-block pb-2">Pasta &amp; Grains</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Tagliatelle with Brown Butter &amp; Sage</h3>
+        <span class="text-amber-500 font-bold">$17 / ₱1,010</span>
+        <p class="text-gray-600 mt-2">Ribbon pasta in nutty brown butter.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Saffron Risotto with Roasted Vegetables</h3>
+        <span class="text-amber-500 font-bold">$18 / ₱1,070</span>
+        <p class="text-gray-600 mt-2">Saffron-infused risotto with vegetables.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Pappardelle with Braised Beef Ragu</h3>
+        <span class="text-amber-500 font-bold">$21 / ₱1,248</span>
+        <p class="text-gray-600 mt-2">Wide pasta with slow-cooked beef ragu.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Pearl Couscous with Lemon &amp; Feta</h3>
+        <span class="text-amber-500 font-bold">$15 / ₱891</span>
+        <p class="text-gray-600 mt-2">Fluffy couscous with herbs and feta.</p>
+      </div>
+    </div>
+  </section>
 
-                    <!-- Roasted Bone Marrow -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Roasted Bone Marrow with Herb Gremolata</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$12</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Rich, buttery bone marrow with vibrant lemon-herb gremolata and toasted bread. </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  <!-- SIDES -->
+  <section>
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold border-b-4 border-amber-500 inline-block pb-2">Sides</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Truffle Mashed Potatoes</h3>
+        <span class="text-amber-500 font-bold">$8 / ₱475</span>
+        <p class="text-gray-600 mt-2">Creamy potatoes with truffle oil.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Charred Broccolini</h3>
+        <span class="text-amber-500 font-bold">$7 / ₱416</span>
+        <p class="text-gray-600 mt-2">Broccolini with chili flakes.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Roasted Heirloom Carrots</h3>
+        <span class="text-amber-500 font-bold">$7 / ₱416</span>
+        <p class="text-gray-600 mt-2">Honey-glazed carrots with thyme.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Creamed Spinach</h3>
+        <span class="text-amber-500 font-bold">$8 / ₱475</span>
+        <p class="text-gray-600 mt-2">Silky spinach with nutmeg.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-1">Garlic Confit Mushrooms</h3>
+        <span class="text-amber-500 font-bold">$8 / ₱475</span>
+        <p class="text-gray-600 mt-2">Mushrooms in garlic-infused oil.</p>
+      </div>
+    </div>
+  </section>
 
-            <!-- MAIN COURSES -->
-            <section class="mb-24 animate-fade-in-up">
-                <h2 class="text-4xl font-bold text-bistro-dark border-b-4 border-bistro-green inline-block mb-12 pb-2">Main Courses</h2>
+  <!-- BEVERAGES -->
+  <section>
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold border-b-4 border-amber-500 inline-block pb-2">Beverages</h2>
+    </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-                    <!-- Herb-Crusted Salmon -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Herb-Crusted Salmon</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$26</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Fresh Atlantic salmon with crispy herb crust, lemon-butter glaze, and seasonal greens. </p>
-                        </div>
-                    </div>
+    <h3 class="text-xl font-semibold mb-4">Non-Alcoholic</h3>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-lg font-semibold mb-1">Iced Black Tea</h3>
+        <span class="text-amber-500 font-bold">$4 / ₱238</span>
+        <p class="text-gray-600 mt-2">House-brewed with citrus peel.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-lg font-semibold mb-1">Elderflower Tonic</h3>
+        <span class="text-amber-500 font-bold">$6 / ₱357</span>
+        <p class="text-gray-600 mt-2">Sparkling floral tonic.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-lg font-semibold mb-1">Ginger &amp; Honey Scrub</h3>
+        <span class="text-amber-500 font-bold">$5 / ₱297</span>
+        <p class="text-gray-600 mt-2">Warming ginger drink.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-lg font-semibold mb-1">Cucumber Mint Juice</h3>
+        <span class="text-amber-500 font-bold">$5 / ₱297</span>
+        <p class="text-gray-600 mt-2">Cold-pressed and refreshing.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-lg font-semibold mb-1">Espresso Tonic</h3>
+        <span class="text-amber-500 font-bold">$4 / ₱238</span>
+        <p class="text-gray-600 mt-2">Espresso with tonic water.</p>
+      </div>
+    </div>
 
-                    <!-- Grilled Ribeye -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Grilled Ribeye Steak (10-12oz)</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$34</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Prime cut ribeye with truffle butter, roasted vegetables, and finishing sea salt.</p>
-                        </div>
-                    </div>
+    <h3 class="text-xl font-semibold mb-4">Cocktails &amp; Wine</h3>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-lg font-semibold mb-1">Classic Negroni</h3>
+        <span class="text-amber-500 font-bold">$11 / ₱654</span>
+        <p class="text-gray-600 mt-2">Gin, Campari, vermouth.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-lg font-semibold mb-1">French 75</h3>
+        <span class="text-amber-500 font-bold">$12 / ₱713</span>
+        <p class="text-gray-600 mt-2">Gin and champagne.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-lg font-semibold mb-1">Smoked Old Fashioned</h3>
+        <span class="text-amber-500 font-bold">$13 / ₱773</span>
+        <p class="text-gray-600 mt-2">Bourbon with smoke.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-lg font-semibold mb-1">Aperol Spritz</h3>
+        <span class="text-amber-500 font-bold">$11 / ₱654</span>
+        <p class="text-gray-600 mt-2">Light aperitivo cocktail.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-lg font-semibold mb-1">House Red Wine</h3>
+        <span class="text-amber-500 font-bold">Glass $8 / ₱475 | Bottle $48 / ₱2,853</span>
+        <p class="text-gray-600 mt-2">Balanced house selection.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-lg font-semibold mb-1">House White Wine</h3>
+        <span class="text-amber-500 font-bold">Glass $8 / ₱475 | Bottle $48 / ₱2,853</span>
+        <p class="text-gray-600 mt-2">Crisp and refreshing.</p>
+      </div>
+    </div>
 
-                    <!-- Wild Mushroom Risotto -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Wild Mushroom Risotto</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$19</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Creamy arborio rice with porcini mushrooms, aged parmesan, and earthy truffles. </p>
-                        </div>
-                    </div>
+    <div class="mt-12 p-6 bg-dark text-white rounded-lg italic text-center">Water and soft drinks available upon request.</div>
+  </section>
 
-                    <!-- Seared Duck Breast -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Seared Duck Breast with Cherry Reduction</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$29</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Medium-rare duck with crispy skin, paired with tart cherry gastrique and seasonal vegetables.</p>
-                        </div>
-                    </div>
+</main>
 
-                    <!-- Braised Short Ribs -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Braised Short Ribs with Red Wine Jus</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$31</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Fall-apart tender short ribs braised in rich red wine, served with creamy mashed potatoes.</p>
-                        </div>
-                    </div>
-
-                    <!-- Pan-Roasted Chicken -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Pan-Roasted Chicken Supreme with Garlic Jus</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$24</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Perfectly roasted chicken breast with herb butter, roasted garlic sauce, and root vegetables.</p>
-                        </div>
-                    </div>
-
-                    <!-- Lamb Chops -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Lamb Chops with Rosemary &amp; Dijon</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$33</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Perfectly seared lamb chops with rosemary crust, whole-grain Dijon, and mint jus.</p>
-                        </div>
-                    </div>
-
-                    <!-- Miso-Glazed Black Cod -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Miso-Glazed Black Cod</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$32</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Delicate black cod with silky miso glaze, served over steamed rice and seasonal vegetables.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- PASTA & GRAINS -->
-            <section class="mb-24 animate-fade-in-up">
-                <h2 class="text-4xl font-bold text-bistro-dark border-b-4 border-bistro-green inline-block mb-12 pb-2">Pasta &amp; Grains</h2>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-                    <!-- Tagliatelle -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Tagliatelle with Brown Butter &amp; Sage</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$17</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Silky ribbon pasta tossed in nutty brown butter, crispy sage, and aged parmesan.</p>
-                        </div>
-                    </div>
-
-                    <!--Saffron Risotto-->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Saffron Risotto with Roasted Vegetables</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$18</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Golden saffron-infused risotto with roasted seasonal vegetables and truffle oil.</p>
-                        </div>
-                    </div>
-
-                    <!-- Pappardelle -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Pappardelle with Braised Beef Ragu</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$21</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Wide ribbon pasta with slow-cooked beef ragu, fresh herbs, and aged pecorino</p>
-                        </div>
-                    </div>
-
-                    <!-- Pearl Couscous -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Pearl Couscous with Lemon, Herbs &amp; Feta</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$15</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Fluffy pearl couscous with fresh herbs, tangy lemon zest, and creamy feta crumbles.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SIDES -->
-            <section class="mb-24 animate-fade-in-up">
-                <h2 class="text-4xl font-bold text-bistro-dark border-b-4 border-bistro-green inline-block mb-12 pb-2">Sides</h2>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Truffle Mashed Potatoes -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Truffle Mashed Potatoes</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$8</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Creamy Yukon Gold potatoes with black truffle oil and fresh chives.</p>
-                        </div>
-                    </div>
-
-                    <!-- Charred Broccolini -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Charred Broccolini with Chili Flakes</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$7</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Crispy charred broccolini with garlic, red chili flakes, and finishing olive oil.</p>
-                        </div>
-                    </div>
-
-                    <!-- Roasted Carrots -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Roasted Heirloom Carrots with Honey Glaze</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$7</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Colorful heirloom carrots roasted with honey glaze and fresh thyme.</p>
-                        </div>
-                    </div>
-
-                    <!-- Creamed Spinach -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Creamed Spinach with Nutmeg</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$8</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Silky creamed spinach finished with fresh nutmeg and aged gruyere.</p>
-                        </div>
-                    </div>
-
-                    <!-- Garlic Confit Mushrooms -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Garlic Confit Mushrooms</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$8</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Mixed mushrooms cooked in garlic-infused olive oil with fresh herbs.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- BEVERAGES -->
-            <section class="mb-24 animate-fade-in-up">
-                <h2 class="text-4xl font-bold text-bistro-dark border-b-4 border-bistro-green inline-block mb-12 pb-2">Beverages</h2>
-
-                <!-- Non-Alcoholic -->
-                <div class="mb-12">
-                    <h3 class="text-2xl font-bold text-bistro-dark mb-8">Non-Alcoholic</h3>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Iced Black Tea -->
-                        <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">House-Brewed Iced Black Tea with Citrus Peel</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$4</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Refreshing house-made black tea with fresh citrus notes.</p>
-                        </div>
-                    </div>
-
-                    <!-- Elderflower Tonic -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Sparkling Elderflower Tonic</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$6</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Light and floral sparkling tonic with house-made elderflower cordial.</p>
-                        </div>
-                    </div>
-
-                    <!-- Ginger Honey Scrub -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Ginger &amp; Honey Scrub</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$5</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Warming ginger and honey drink with a touch of spice.</p>
-                        </div>
-                    </div>
-
-                    <!-- Cucumber Mint Juice -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Cold-Pressed Cucumber Mint Juice</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$5</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Fresh, crisp cucumber juice with cool mint and lime.</p>
-                        </div>
-                    </div>
-
-                    <!-- Espresso Tonic -->
-                    <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Espresso Tonic</h3>
-                                <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$4</span>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">Bold espresso served over ice with aromatic quinine tonic.</p>
-                        </div>
-                    </div>
-                </div>
-                </div>
-
-                <!-- Cocktails & Wine -->
-                <div>
-                    <h3 class="text-2xl font-bold text-bistro-dark mb-8">Cocktails &amp; Wine</h3>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Negroni -->
-                        <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                            <div class="p-6">
-                                <div class="flex justify-between items-start mb-3">
-                                    <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Classic Negroni</h3>
-                                    <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$11</span>
-                                </div>
-                                <p class="text-gray-600 text-sm leading-relaxed">Timeless gin, Campari, and vermouth cocktail served with orange.</p>
-                            </div>
-                        </div>
-
-                        <!-- French 75 -->
-                        <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                            <div class="p-6">
-                                <div class="flex justify-between items-start mb-3">
-                                    <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">French 75</h3>
-                                    <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$12</span>
-                                </div>
-                                <p class="text-gray-600 text-sm leading-relaxed">Elegant gin and champagne cocktail with fresh lemon.</p>
-                            </div>
-                        </div>
-
-                        <!-- Smoked Old Fashioned -->
-                        <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                            <div class="p-6">
-                                <div class="flex justify-between items-start mb-3">
-                                    <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Smoked Old Fashioned</h3>
-                                    <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$13</span>
-                                </div>
-                                <p class="text-gray-600 text-sm leading-relaxed">Classic bourbon cocktail with a hint of smoke and bitters.</p>
-                            </div>
-                        </div>
-
-                        <!-- Aperol Spitz -->
-                        <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                            <div class="p-6">
-                                <div class="flex justify-between items-start mb-3">
-                                    <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">Aperol Spitz</h3>
-                                    <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">$11</span>
-                                </div>
-                                <p class="text-gray-600 text-sm leading-relaxed">Light and refreshing aperitivo with prosecco and soda.</p>
-                            </div>
-                        </div>
-
-                        <!-- House Red Wine -->
-                        <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                            <div class="p-6">
-                                <div class="flex justify-between items-start mb-3">
-                                    <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">House Red Wine</h3>
-                                    <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">Glass $8 | Bottle $48</span>
-                                </div>
-                                <p class="text-gray-600 text-sm leading-relaxed">Carefully selected house red wine with balanced flavor.</p>
-                            </div>
-                        </div>
-
-                        <!-- House White Wine -->
-                        <div class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-                            <div class="p-6">
-                                <div class="flex justify-between items-start mb-3">
-                                    <h3 class="font-bold text-lg text-bistro-dark group-hover:text-bistro-gold transition">House White Wine</h3>
-                                    <span class="text-bistro-gold font-bold text-lg whitespace-nowrap ml-4">Glass $8 | Bottle $48</span>
-                                </div>
-                                <p class="text-gray-600 text-sm leading-relaxed">Crisp house white wine with bright, refreshing notes.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Note about water -->
-                <div class="mt-12 p-6 bg-bistro-dark text-white rounded-lg italic text-center">
-                    <p>Water and soft drinks are available upon request.</p>
-                </div>
-            </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-bistro-dark text-black py-12">
-        <div class="w-full px-6 md:px-8 lg:px-12 text-center">
-            <p class="text-sm opacity-60">© 2026 Josef Michael Damaso | ITE1 Final Project</p>
-        </div>
-    </footer>
+<!-- FOOTER -->
+<footer class="bg-dark text-white py-12">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <p class="text-sm opacity-70">© 2026 Josef Michael Damaso | ITE1 Final Project</p>
+  </div>
+</footer>
 
 </body>
 </html>
