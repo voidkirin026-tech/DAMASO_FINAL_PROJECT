@@ -1,121 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gilded Edge Bistro | Home</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: `#d4af37`,
-                        dark: `#1c1917`,
-                    },
-                    fontFamily: {
-                        poppins: [`Poppins`, `sans-serif`],
-                    },
-                },
-            },
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gilded Edge Bistro | Home</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS v4 (browser build) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="font-poppins bg-emerald-50 text-stone-900">
-    <!-- NAVIGATION -->
+<body class="bg-stone-50 text-stone-900 font-[Poppins]">
+
+<!-- NAVIGATION -->
 <header class="sticky top-0 z-50 bg-amber-50 shadow">
-<div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-    <h1 class="text-2xl font-bold tracking-tight">GILDED <span class="text-gold">EDGE</span></h1>
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <h1 class="text-2xl font-bold tracking-tight">
+      GILDED <span class="text-amber-500">EDGE</span>
+    </h1>
 
     <!-- Desktop Nav -->
-    <nav class="hidden md:flex gap-8 text-sm font-semibold uppercase">
-    <a href="index.html" class="text-gold">Home</a>
-    <a href="about.html" class="hover:text-gold">About</a>
-    <a href="menu.html" class="hover:text-gold">Menu</a>
-    <a href="contact.html" class="hover:text-gold">Contact</a>
+    <nav aria-label="home desktop nav" class="hidden md:flex gap-8 text-sm font-semibold uppercase">
+      <a href="index.html" class="text-amber-500">Home</a>
+      <a href="about.html" class="hover:text-amber-500">About</a>
+      <a href="menu.html" class="hover:text-amber-500">Menu</a>
+      <a href="contact.html" class="hover:text-amber-500">Contact</a>
     </nav>
 
     <!-- Mobile Menu Button -->
-    <button type="button" id="menuBtn" class="md:hidden">
-        mobileMenu
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <button type="button" id="menuBtn" class="md:hidden" aria-label="Open menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-    </svg>
+      </svg>
     </button>
-</div>
+  </div>
 
-<!-- Mobile Nav -->
-<div id="mobileMenu" class="hidden md:hidden bg-amber-50 border-t">
-    <nav class="flex flex-col px-4 py-4 gap-4 font-semibold uppercase text-sm">
-    <a href="index.html" class="text-gold">Home</a>
-    <a href="about.html">About</a>
-    <a href="menu.html">Menu</a>
-    <a href="contact.html">Contact</a>
+  <!-- Mobile Nav -->
+  <div id="mobileMenu" class="hidden bg-amber-50 border-t md:hidden">
+    <nav aria-label="home mobile nav" class="flex flex-col px-4 py-4 gap-4 font-semibold uppercase text-sm">
+      <a href="index.html" class="text-amber-500">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Contact</a>
     </nav>
-</div>
+  </div>
 </header>
 
 <!-- HERO -->
 <section class="relative h-[70vh] flex items-center justify-center">
-<img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1600" class="absolute inset-0 w-full h-full object-cover" alt="Hero">
-<div class="absolute inset-0 bg-black/60"></div>
+  <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1600" alt="Iced Tea" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-black/60"></div>
 
-<div class="relative z-10 text-center px-6 max-w-2xl">
-    <h2 class="text-4xl md:text-6xl font-bold text-white mb-6">Experience <span class="text-gold">Elevated Dining</span></h2>
+  <div class="relative z-10 text-center px-6 max-w-2xl">
+    <h2 class="text-4xl md:text-6xl font-bold text-white mb-6">
+      Experience <span class="text-amber-500">Elevated Dining</span>
+    </h2>
     <p class="text-white/90 mb-8">Traditional flavors, modern techniques, unforgettable moments.</p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-    <a href="menu.html" class="bg-gold text-dark px-8 py-3 rounded-full font-bold hover:scale-105 transition">View Menu</a>
-    <a href="contact.html" class="border border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-dark transition">Reserve Table</a>
+      <a href="menu.html" class="bg-amber-500 text-stone-900 px-8 py-3 rounded-full font-bold hover:scale-105 transition">View Menu</a>
+      <a href="contact.html" class="border border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-stone-900 transition">Reserve Table</a>
     </div>
-</div>
+  </div>
 </section>
 
 <!-- ABOUT PREVIEW -->
 <section class="py-20 bg-amber-50">
-<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
     <div>
-    <h3 class="text-3xl font-bold mb-4 border-l-4 border-gold pl-4">Welcome to Gilded Edge</h3>
-    <p class="mb-4 text-gray-700">Founded in 2026, Gilded Edge Bistro blends culinary heritage with modern innovation using locally sourced ingredients.</p>
-    <p class="mb-6 text-gray-700">Every dish reflects our passion, precision, and commitment to excellence.</p>
-    <a href="about.html" class="inline-block bg-dark text-white px-6 py-3 rounded-lg font-semibold hover:bg-gold hover:text-dark transition">Learn Our Story</a>
+      <h3 class="text-3xl font-bold mb-4 border-l-4 border-amber-500 pl-4">Welcome to Gilded Edge</h3>
+      <p class="mb-4 text-gray-700">Founded in 2026, Gilded Edge Bistro blends culinary heritage with modern innovation using locally sourced ingredients.</p>
+      <p class="mb-6 text-gray-700">Every dish reflects our passion, precision, and commitment to excellence.</p>
+      <a href="about.html" class="inline-block bg-stone-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-amber-500 hover:text-stone-900 transition">Learn Our Story</a>
     </div>
-    <img src="https://images.unsplash.com/photo-1550966841-3ee32289674c?auto=format&fit=crop&w=600" class="rounded-xl shadow-lg" alt="Learn Our Story">
-</div>
+    <img width="7000" height="4669" sizes="(max-width: 767px) 100vw, (max-width: 918px) min(100%, 870px), (max-height: 786px) min(100%, 870px), (min-aspect-ratio: 7000/4669) calc(calc(100vh - 205px) * 1.4992503748125936), calc(100vw - 48px)" src="https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" srcset="https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=870&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 870w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=1170&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1170w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=1470&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1470w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=1740&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1740w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=1770&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1770w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2070w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=2340&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2340w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=2370&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2370w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2670w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=2940&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2940w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=2970&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2970w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=3270&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3270w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=3540&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3540w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=3570&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3570w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=3870&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3870w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=4140&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4140w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=4170&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4170w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=4470&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4470w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=4740&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4740w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=4770&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4770w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=5070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5070w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=5340&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5340w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=5370&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5370w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=5670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5670w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=5940&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5940w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=5970&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5970w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=6270&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 6270w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=6540&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 6540w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=6570&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 6570w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=6870&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 6870w, https://plus.unsplash.com/premium_photo-1661878753059-af0b5103f791?q=80&amp;w=7000&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 7000w" alt="modern restaurant interior design. 3d rendering concept" class="responsiveImg-czQTaZ">
+  </div>
 </section>
 
 <!-- HIGHLIGHTS -->
 <section class="py-20 bg-stone-50">
-<div class="max-w-7xl mx-auto px-6">
+  <div class="max-w-7xl mx-auto px-6">
     <h3 class="text-3xl font-bold text-center mb-12">Why Choose Gilded Edge</h3>
     <div class="grid gap-8 md:grid-cols-3">
-    <div class="bg-amber-50 p-8 rounded-lg shadow hover:-translate-y-1 transition">
+      <div class="bg-amber-50 p-8 rounded-lg shadow hover:-translate-y-1 transition">
         <h4 class="font-bold mb-2">Premium Ingredients</h4>
         <p class="text-gray-600">Fresh, locally sourced ingredients in every dish.</p>
-    </div>
-    <div class="bg-amber-50 p-8 rounded-lg shadow hover:-translate-y-1 transition">
+      </div>
+      <div class="bg-amber-50 p-8 rounded-lg shadow hover:-translate-y-1 transition">
         <h4 class="font-bold mb-2">Expert Chefs</h4>
-        <p class="text-gray-600">Trained in world‑class kitchens.</p>
-    </div>
-    <div class="bg-amber-50 p-8 rounded-lg shadow hover:-translate-y-1 transition">
+        <p class="text-gray-600">Trained in world-class kitchens.</p>
+      </div>
+      <div class="bg-amber-50 p-8 rounded-lg shadow hover:-translate-y-1 transition">
         <h4 class="font-bold mb-2">Exceptional Service</h4>
         <p class="text-gray-600">Warm hospitality and personalized dining.</p>
+      </div>
     </div>
-    </div>
-</div>
+  </div>
 </section>
 
 <!-- CTA -->
-<section class="py-20 bg-dark text-center text-white">
-<h3 class="text-3xl font-bold mb-4">Ready for an Unforgettable Experience?</h3>
-<p class="mb-8">Reserve your table today.</p>
-<a href="contact.html" class="bg-gold text-dark px-10 py-4 rounded-full font-bold hover:scale-105 transition">Make a Reservation</a>
+<section class="py-20 bg-stone-900 text-center text-white">
+  <h3 class="text-3xl font-bold mb-4">Ready for an Unforgettable Experience?</h3>
+  <p class="mb-8">Reserve your table today.</p>
+  <a href="contact.html" class="bg-amber-500 text-stone-900 px-10 py-4 rounded-full font-bold hover:scale-105 transition">Make a Reservation</a>
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-dark text-white py-6 text-center text-sm opacity-70">
-© Josef Michael Damaso | ITE1 Final Project
+<footer class="bg-stone-900 text-white py-6 text-center text-sm opacity-70">
+  © 2026 Josef Michael Damaso | ITE1 Final Project
 </footer>
+
+<script>
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+</script>
+
 </body>
 </html>
